@@ -311,9 +311,33 @@ _C.CUDNN = CfgNode()
 # Benchmark to select fastest CUDNN algorithms (best for fixed input sizes)
 _C.CUDNN.BENCHMARK = True
 
+
+# --------------------------------- KNET options ---------------------------- #
+_C.KNET = CfgNode()
+_C.KNET.FEATS = [
+    "slr_mean",
+    "slr_std",
+    "ent_mean",
+    "ent_std",
+    "cosine_src_live",
+    "cosine_src_hidden",
+    "norm_delta_live_hidden",
+    "grad_norm",
+    "batch_size",
+    "img_size",
+]
+_C.KNET.HIDDEN_DIM = 64
+_C.KNET.MIN_GAIN = 0.0
+_C.KNET.MAX_GAIN = 0.2
+_C.KNET.SMOOTH = 0.9
+_C.KNET.PER_LAYER = False
+_C.KNET.CHECKPOINT = ""
+
 # --------------------------------- Default config -------------------------- #
 _CFG_DEFAULT = _C.clone()
 _CFG_DEFAULT.freeze()
+
+
 
 
 def assert_and_infer_cfg():

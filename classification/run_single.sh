@@ -1,0 +1,1 @@
+python classification/test_time.py --cfg classification/cfgs/cifar10_c/cmf.yaml

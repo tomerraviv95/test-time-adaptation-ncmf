@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import torch
 import random
-from autoattack import AutoAttack
+# from autoattack import AutoAttack
 from torch import nn
 from tqdm import tqdm
 
